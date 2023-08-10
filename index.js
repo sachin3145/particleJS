@@ -105,13 +105,13 @@ function connect() {
               (particlesArray[a].y - particlesArray[b].y) *
                 (particlesArray[a].y - particlesArray[b].y);
             if (distance < ((canvas.width / 7) * (canvas.height / 7))) {
-                let opacityValue = 1 - (distance / 20000);
-                ctx.strokeStyle = 'rgba(0,0,0'+opacityValue+')';
-                ctx.lineWidth = 1;
-                ctx.beginPath();
-                ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
-                ctx.lineTo(particlesArray[b].x, particlesArray[b].y);
-                ctx.stroke();
+              let opacityValue = 1 - (distance /20000);
+              ctx.beginPath();
+              ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
+              ctx.lineTo(particlesArray[b].x, particlesArray[b].y);
+              ctx.strokeStyle = 'rgba(0,0,0,' + opacityValue + ')';
+              ctx.lineWidth = 1;
+              ctx.stroke();
             }
         }
     }
